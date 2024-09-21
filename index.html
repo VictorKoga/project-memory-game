@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- linguagem em portugues -->
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- titulo do html -->
+  <title>Jogo Da Memória</title>
+  <!-- caminhos onde esta os meus css -->
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+
+<body>
+  <!-- tem uma classe container onde chamamos no CSS -->
+  <div class="container">
+    <!-- nome do jogo -->
+    <h2>JOGO DA MEMÓRIA</h2>
+    <!-- onde injetamos todo nosso codigo -->
+    <div class="game"></div>
+    <!-- botão para resetar ele recarrega a pagina com o reload -->
+    <button class="reset" onclick="window.location.reload()">RESET GAME</button>
+  </div>
+  <!-- caminho para o link do meu javascript -->
+  <script src="./src/scripts/engine.js" defer></script>
+</body>
+
+</html>

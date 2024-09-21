@@ -1,0 +1,145 @@
+
+body {
+  /* organizar elementos dentro da página */
+  display: flex;
+  /* alinha todos os flex items ao centro dentro do flex container */
+  justify-content: center;
+  /* alinhas os items ao centro */
+  align-items: center;
+  /* altura minima em 100 view heigth */
+  min-height: 100vh;
+  /* aplica cor ao fundo  */
+  background: #fc1e8a;
+  user-select: none;
+}
+
+.container {
+  /* posição */
+  position: relative;
+  /* organizar elementos dentro da página */
+  display: flex;
+  flex-direction: column;
+  /*  alinha todos os flex items ao centro dentro do flex container */
+  justify-content: center;
+  /* alinhas os items ao centro */
+  align-items: center;
+  /* propriedade define o tamanho de A lacuna entre as linhas e entre as colunas no layout flexbox */
+  gap: 30px;
+  /* aplica cor ao fundo gradiente */
+  background: linear-gradient(
+    325deg,
+    #03001e 0%,
+    #7303c0 30%,
+    #ec38bc 70%,
+    #fdeff9 100%
+  );
+  /* espaçamento do conteudo container */
+  padding: 40px 60px;
+}
+
+h2 {
+  /* tamanho da fonte */
+  font-size: 3em;
+  /* cor do texto */
+  color: #fff;
+  /* transforma o texto para MAIUSCULO */
+  text-transform: uppercase;
+  /* espaçamento entre as letras */
+  letter-spacing: 0.1em;
+}
+
+.reset {
+  /* espaçamento entre os elementos */
+  padding: 15px 20px;
+  /* largura em 100% */
+  width: 100%;
+  /* cor do texto */
+  color: #000;
+  /* cor do fundo */
+  background-color: #fff;
+  /* sem borda */
+  border: none;
+  /* tamanho da fonte em 24px */
+  font-size: 1.5em;
+  /* espaçamento entre as letras */
+  letter-spacing: 0.1em;
+  /* transforma o texto para MAIUSCULO */
+  text-transform: uppercase;
+  /* muda o cursor do mouse  */
+  cursor: pointer;
+  /* peso da fonte em bold */
+  font-weight: 600;
+}
+
+.reset:focus {
+  /* cor do texto */
+  color: #ec38bc;
+  /* cor do fundo */
+  background-color: #262809;
+}
+
+.game {
+  /* largura */
+  width: 430px;
+  /* altura */
+  height: 430px;
+  /* organizar elementos dentro da página */
+  display: flex;
+  /* propriedade especifica se os itens flexíveis devem ser encapsulados ou não */
+  flex-wrap: wrap;
+  /* propriedade define o tamanho de A lacuna entre as linhas e entre as colunas no layout flexbox */
+  gap: 10px;
+  /* estilos */
+  transform-style: preserve-3d;
+  /* perspectiva de 500px */
+  perspective: 500px;
+}
+
+.item {
+  position: relative;
+  /* largura */
+  width: 100px;
+  /* altura */
+  height: 100px;
+  /* organizar elementos dentro da página */
+  display: flex;
+  /* alinha os items ao centro */
+  align-items: center;
+  justify-content: center;
+  /* cor do fundo branco */
+  background-color: #fff;
+  /* tamanho da fonte  */
+  font-size: 3em;
+  /* faz uma rotação no eixo y em 180 graus */
+  transform: rotateY(180deg);
+  /*  faz uma transição em 0.25 segundos */
+  transition: 0.25s;
+}
+
+.item::after {
+  /* conteudo vazio */
+  content: "";
+  /* posição absoluta */
+  position: absolute;
+  /*  define a distância entre um elemento e o elemento pai */
+  inset: 0;
+  /* cor do fundo */
+  background: #404040;
+  /* opacity: 0.85; */
+  /* tempo de transição */
+  transition: 0.25s;
+  /* rotação no eixo Y de 0 graus */
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+
+.item.boxOpen {
+  /* rotação no eixo Y de 0 graus */
+  transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+  /* rotação no eixo Y de 180 graus */
+  transform: rotateY(180deg);
+}

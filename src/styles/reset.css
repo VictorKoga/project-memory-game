@@ -1,0 +1,13 @@
+/* modificando a raiz do DOM  */
+* {
+  /* aplica a margin 0 para todos os lados */
+  margin: 0;
+  /* aplica espaçamento 0 para todos os lados */
+  padding: 0;
+  /* nao vai definir nenhum contorno */
+  outline: none;
+  /* conta de borda a borda */
+  box-sizing: border-box;
+  /* qual a familia da font utilizada no projeto */
+  font-family: monospace;
+}
